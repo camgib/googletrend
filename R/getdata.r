@@ -125,7 +125,7 @@ gettrend<-function(keyword="boston", geo=NULL, year=NULL,
     trendsURL <- sprintf('%s&geo=%s', trendsURL, geo)
   
   if( !is.null(year))
-    trendsURL <- paste(trendsURL, '&date=1%2F', year,'%2012m', sep='')
+    trendsURL <- paste(trendsURL, '&date=', year, sep='')
   
   utils::browseURL(trendsURL)
   message(trendsURL)
